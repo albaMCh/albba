@@ -48,6 +48,7 @@
 .title,
 .description {
   text-align: center;
+  color: rgb(77, 74, 74);
 }
 
 .description {
@@ -76,19 +77,20 @@
 .card {
   margin: 1rem;
   padding: 1.5rem;
-  text-align: left;
-  color: inherit;
+  text-align: center;
+  color: gray;
   text-decoration: none;
-  border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
   max-width: 300px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 
   &:hover,
   &:focus,
   &:active {
-    color: #0070f3;
-    border-color: #0070f3;
+    color: #3b3b3c;
+    border-color: #3b3b3c;
   }
 
   h2 {
@@ -104,20 +106,25 @@
 }
 
 .search-input {
-  height: 30px;
+  height: 50px;
   width: 300px;
   padding: 10px;
+  border-radius: 5px;
 }
 
 .search-button {
-  height: 30px;
-  background-color: #7e7c7c;
+  height: 50px;
+  width: 100px;
+  background-color: hsl(180, 45%, 63%);
   color: #fff;
+  border-radius: 5px;
 }
 
 .reset-button,
 .return-button {
   height: 30px;
+  width: 50px;
+  border-radius: 5px;
 }
 
 @media (max-width: 600px) {
