@@ -7,7 +7,7 @@ import Link from "next/link";
 import { getFormattedProducts } from "../shared/utils/helpers";
 
 import { IProduct } from "../shared/models/Product";
-import { getUsuarios } from "../shared/middleware/products.middleware";
+import { getProducts } from "../shared/middleware/products.middleware";
 
 import {
   onChangeSearchText,
@@ -42,11 +42,11 @@ function Home({ products }: { products: IProduct[] }) {
       <ul className={styles["card-group"]}>
         {products.map((product: IProduct, index: number) => (
           <li key={index} className={styles.card}>
-            <Link href={"/productos/" + product.id}>
+            <Link href={"/productos/" + product.slug}>
               <a>
-                <p>{product.firstName}</p>
-                <p>{product.lastName}</p>
-                <p>{product.age}</p>
+                <p>{product.title}</p>
+                <p>{product.price}€</p>
+                <p>{product.image}</p>
               </a>
             </Link>
           </li>
@@ -62,14 +62,9 @@ function Home({ products }: { products: IProduct[] }) {
 export async function getStaticProps() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const response = await getUsuarios();
-
-  console.log("------------------");
-  console.log(response.data);
+  const response = await getProducts();
 
   let products = getFormattedProducts(response.data);
-
-  products = products.slice(0, 10);
 
   // By returning { props: { posts } }, the Blog component
   // will receive `posts` as a prop at build time

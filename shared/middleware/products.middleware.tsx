@@ -1,7 +1,7 @@
-const API_URL = "https://dummyjson.com";
+const API_URL = "http://localhost:3000/api";
 const ENDPOINT = "products";
 
-export const getUsuarios = async ({ query }: { query?: string } = {}) => {
+export const getProducts = async ({ query }: { query?: string } = {}) => {
   let isError = false;
   try {
     const url = `${API_URL}/${ENDPOINT}${query ? "/search?q=" + query : ""}`;
@@ -9,10 +9,14 @@ export const getUsuarios = async ({ query }: { query?: string } = {}) => {
     console.log("------------------------");
     console.log("url:", url);
     const res = await fetch(url);
+
     const data = await res.json();
 
+    console.log("----------------------");
+    console.log("data:", data);
+
     return {
-      data: data.products,
+      ...data,
       isError,
     };
   } catch (e) {
@@ -24,7 +28,7 @@ export const getUsuarios = async ({ query }: { query?: string } = {}) => {
   }
 };
 
-export const getUsuario = async (id: string) => {
+export const getProduct = async (id: string) => {
   let isError = false;
   try {
     let response = await fetch(`${API_URL}/${ENDPOINT}/${id}`);
