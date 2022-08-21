@@ -1,4 +1,4 @@
-import { IProduct } from "../shared/models/Product";
+import { IProduct } from "../../shared/models/Product";
 import babiesPacifiers from "./babiesPacifier";
 import bibs from "./bibs";
 import dressingCases from "./dressingCases";

@@ -4,7 +4,10 @@ import homeStyles from "../styles/Home.module.scss";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { getFormattedProducts } from "../shared/utils/helpers";
+import {
+  getFormattedProducts,
+  getFormattedPrice,
+} from "../shared/utils/helpers";
 
 import { IProduct } from "../shared/models/Product";
 import { getProducts } from "../shared/middleware/products.middleware";
@@ -39,13 +42,13 @@ function Home({ products }: { products: IProduct[] }) {
           Buscar
         </button>
       </div>
-      <ul className={styles["card-group"]}>
+      <ul className={`${styles["card-group"]} ${homeStyles.productsSection}`}>
         {products.map((product: IProduct, index: number) => (
           <li key={index} className={styles.card}>
             <Link href={"/productos/" + product.slug}>
               <a>
                 <p>{product.title}</p>
-                <p>{product.price}€</p>
+                <p>{getFormattedPrice(product.price)}€</p>
                 <p>{product.image}</p>
               </a>
             </Link>

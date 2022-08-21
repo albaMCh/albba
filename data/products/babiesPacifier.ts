@@ -1,4 +1,4 @@
-import { IProduct } from "../shared/models/Product";
+import { IProduct } from "../../shared/models/Product";
 
 // References
 const categoryRerefence = "BPA";

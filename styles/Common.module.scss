@@ -1,3 +1,5 @@
+@import "./Colors.module";
+
 .container {
   padding: 0 2rem;
 }
@@ -85,6 +87,13 @@
   max-width: 300px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  border: 1px solid #eaeaea;
+
+  @media screen and (min-width: 992px) {
+    &:hover {
+      margin-top: -4px;
+    }
+  }
 
   &:hover,
   &:focus,
@@ -115,7 +124,7 @@
 .search-button {
   height: 50px;
   width: 100px;
-  background-color: hsl(180, 45%, 63%);
+  background-color: $color-green;
   color: #fff;
   border-radius: 5px;
 }

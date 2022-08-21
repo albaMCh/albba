@@ -1,4 +1,7 @@
 import Link from "next/link";
+
+import navbarStyles from "../styles/Navbar.module.scss";
+
 const NavItem = ({
   text,
   href,
@@ -10,7 +13,7 @@ const NavItem = ({
 }) => {
   return (
     <Link href={href}>
-      <a className={`nav__item ${active ? "active" : ""}`}>{text}</a>
+      <a className={navbarStyles.navLink}>{text}</a>
     </Link>
   );
 };

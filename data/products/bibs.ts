@@ -1,6 +1,6 @@
 // Baberos
 
-import { IProduct } from "../shared/models/Product";
+import { IProduct } from "../../shared/models/Product";
 
 const categoryRerefence = "BIB";
 

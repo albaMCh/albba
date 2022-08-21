@@ -1,4 +1,4 @@
-import { IProduct } from "../shared/models/Product";
+import { IProduct } from "../../shared/models/Product";
 
 const categoryRerefence = "KYR";
 
@@ -8,7 +8,7 @@ const keyRings: IProduct[] = [
   {
     slug: "llavero-personalizado",
     reference: `${categoryRerefence}-001-001-M-V2022`,
-    title: "Llavero personalizado como cada cliente prefiera",
+    title: "Llavero personalizado",
     category,
     price: 499,
     description: "llavero de tela personalizado como cada cliente decida",

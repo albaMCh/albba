@@ -1,0 +1,89 @@
+@import "./Colors.module";
+
+.header {
+  position: sticky;
+  z-index: 30;
+  top: 0;
+
+  .nav {
+    background-color: $color-lavender;
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+
+    .menuBar {
+      display: flex;
+      flex-direction: column;
+      row-gap: 6px;
+      cursor: pointer;
+
+      div {
+        width: 40px;
+        height: 4px;
+        background-color: $color-white;
+        border-radius: 2px;
+      }
+    }
+
+    .menuList {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 60px;
+      width: 288px;
+      row-gap: 24px;
+      right: -288px;
+      padding: 24px 16px;
+      transition: all 0.2s;
+      min-height: calc(100vh - 60px);
+      background-color: $color-lavender;
+
+      &.menuList_active {
+        right: 0;
+      }
+
+      .navLink {
+        font-size: 18px;
+        position: relative;
+        transition: all 0.2s;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    .nav {
+      .menuBar {
+        display: none;
+      }
+      .menuList {
+        position: unset;
+        flex-direction: row;
+        min-height: fit-content;
+        width: fit-content;
+        column-gap: 24px;
+        align-items: center;
+
+        .navLink {
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 6px;
+            bottom: -16px;
+            left: 0;
+            background-color: $color-white;
+            transition: all 0.2s;
+          }
+
+          &:hover::before {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

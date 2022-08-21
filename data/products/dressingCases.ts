@@ -1,4 +1,4 @@
-import { IProduct } from "../shared/models/Product";
+import { IProduct } from "../../shared/models/Product";
 
 const categoryRerefence = "DSC";
 
@@ -17,29 +17,30 @@ const dressingCases: IProduct[] = [
   {
     slug: "neceser-media-luna",
     reference: "",
-    title:
-      "Neceser semicircular con cremallera, y forro impermeable ideal para el maquillaje",
+    title: "Neceser cremallera media luna",
     category,
     price: 1990,
-    description: "Neceser de cremallera medialuna",
+    description:
+      "Neceser semicircular con cremallera, y forro impermeable ideal para el maquillaje",
+
     image: "",
   },
   {
     slug: "neceser-pico",
     reference: "",
-    title: "Neceser en pico, de gran capacidad",
+    title: "Neceser en pico",
     category,
     price: 1990,
-    description: "Neceser de cremallera pico",
+    description: "Neceser de cremallera pico de gran capacidad",
     image: "",
   },
   {
     slug: "neceser-rectangular",
     reference: "",
-    title: "Neceser rectanguklar con cremallera, y gran capacidad",
+    title: "Neceser rectangular",
     category,
     price: 1990,
-    description: "Neceser de cremallera rectangular",
+    description: "Neceser de cremallera rectangular y gran capacidad",
     image: "",
   },
 ];

@@ -3,32 +3,38 @@ import Image from "next/image";
 import React, { useState } from "react";
 import NavItem from "./navItem.component";
 
+import navbarStyles from "../styles/Navbar.module.scss";
+
 const MENU_LIST = [
-  { text: "Home", href: "/" },
-  { text: "About Us", href: "/about" },
-  { text: "Contact", href: "/contact" },
+  { text: "Inicio", href: "/" },
+  { text: "Sobre mí", href: "/sobre-mi" },
+  { text: "Contacto", href: "/contacto" },
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(false);
   const [activeIdx, setActiveIdx] = useState(-1);
 
   return (
-    <header>
-      <nav className={`nav`}>
+    <header className={navbarStyles.header}>
+      <nav className={navbarStyles.nav}>
         <Link href={"/"}>
           <a>
-            <h1 className="logo">CodeWithMarish</h1>
+            <h1 className="logo">alBBa</h1>
           </a>
         </Link>
         <div
           onClick={() => setNavActive(!navActive)}
-          className={`nav__menu-bar`}
+          className={navbarStyles.menuBar}
         >
           <div></div>
           <div></div>
           <div></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        <div
+          className={`${navActive ? navbarStyles.menuList_active : ""} ${
+            navbarStyles.menuList
+          }`}
+        >
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {

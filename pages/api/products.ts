@@ -1,9 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
 
-import data from "../../data";
-
-import { IProduct } from "../../shared/models/Product";
+import data from "../../data/products";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   let page: number = parseInt(req.query?.page as string);
