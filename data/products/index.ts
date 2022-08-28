@@ -4,6 +4,7 @@ import bibs from "./bibs";
 import dressingCases from "./dressingCases";
 import keyRings from "./keyRings";
 import towels from "./towels";
+import purses from "./purses";
 
 const data: IProduct[] = [
   ...bibs,
@@ -11,6 +12,7 @@ const data: IProduct[] = [
   ...dressingCases,
   ...towels,
   ...keyRings,
+  ...purses,
 ];
 
 export default data;

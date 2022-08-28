@@ -1,0 +1,17 @@
+@import "./CurrentTheme";
+
+.aboutMeSection {
+  padding: 20px;
+
+  .aboutMeTitle {
+  }
+
+  .aboutMeCard {
+    margin-top: 20px;
+    font-size: 20px;
+
+    p {
+      margin-top: 15px;
+    }
+  }
+}

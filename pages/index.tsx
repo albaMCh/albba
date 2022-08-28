@@ -17,6 +17,7 @@ import {
   onSearchKeyPress,
   search,
 } from "../shared/utils/search";
+import ProductCard from "../components/productCard.component";
 
 function Home({ products }: { products: IProduct[] }) {
   const router = useRouter();
@@ -44,15 +45,7 @@ function Home({ products }: { products: IProduct[] }) {
       </div>
       <ul className={`${styles["card-group"]} ${homeStyles.productsSection}`}>
         {products.map((product: IProduct, index: number) => (
-          <li key={index} className={styles.card}>
-            <Link href={"/productos/" + product.slug}>
-              <a>
-                <p>{product.title}</p>
-                <p>{getFormattedPrice(product.price)}€</p>
-                <p>{product.image}</p>
-              </a>
-            </Link>
-          </li>
+          <ProductCard product={product} index={index} key={index} />
         ))}
       </ul>
     </div>

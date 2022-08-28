@@ -17,6 +17,10 @@ const nextConfig = {
         source: "/sobre-mi",
         destination: "/about-me",
       },
+      {
+        source: "/contacto",
+        destination: "/contacts",
+      },
     ];
   },
 };

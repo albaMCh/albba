@@ -11,6 +11,7 @@ import styles from "../../styles/Common.module.scss";
 
 import productStyles from "../../styles/Product.module.scss";
 import { IProduct } from "../../shared/models/Product";
+import { getFormattedPrice } from "../../shared/utils/helpers";
 
 function User({ product }: any) {
   const router = useRouter();
@@ -39,7 +40,7 @@ function User({ product }: any) {
         </div>
         <div>
           <label>Precio: </label>
-          <span>{product.price}€</span>
+          <span>{getFormattedPrice(product.price)}€</span>
         </div>
         <div>
           <label>Imagen:</label>

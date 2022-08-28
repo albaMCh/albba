@@ -1,4 +1,5 @@
 @import "./Colors.module";
+@import "./CurrentTheme";
 
 .header {
   position: sticky;
@@ -6,7 +7,7 @@
   top: 0;
 
   .nav {
-    background-color: $color-lavender;
+    background-color: $main-background-color;
     display: flex;
     padding: 16px;
     justify-content: space-between;
@@ -37,7 +38,7 @@
       padding: 24px 16px;
       transition: all 0.2s;
       min-height: calc(100vh - 60px);
-      background-color: $color-lavender;
+      background-color: $main-background-color;
 
       &.menuList_active {
         right: 0;
