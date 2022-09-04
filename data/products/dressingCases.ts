@@ -2,14 +2,14 @@ import { IProduct } from "../../shared/models/Product";
 
 const categoryRerefence = "DSC";
 
-const category = "dressingCase";
+const categoryName = "dressingCase";
 
 const dressingCases: IProduct[] = [
   {
     slug: "neceser-volante",
     reference: `${categoryRerefence}-001-001-M-V2022`,
     title: "Neceser de volantes",
-    category,
+    categories: [categoryName],
     price: 1990,
     description: "Neceser de cremallera con volante",
     image: "",
@@ -18,7 +18,7 @@ const dressingCases: IProduct[] = [
     slug: "neceser-media-luna",
     reference: "",
     title: "Neceser cremallera media luna",
-    category,
+    categories: [categoryName],
     price: 1990,
     description:
       "Neceser semicircular con cremallera, y forro impermeable ideal para el maquillaje",
@@ -29,7 +29,7 @@ const dressingCases: IProduct[] = [
     slug: "neceser-pico",
     reference: "",
     title: "Neceser en pico",
-    category,
+    categories: [categoryName],
     price: 1990,
     description: "Neceser de cremallera pico de gran capacidad",
     image: "",
@@ -38,7 +38,7 @@ const dressingCases: IProduct[] = [
     slug: "neceser-rectangular",
     reference: "",
     title: "Neceser rectangular",
-    category,
+    categories: [categoryName],
     price: 1990,
     description: "Neceser de cremallera rectangular y gran capacidad",
     image: "",

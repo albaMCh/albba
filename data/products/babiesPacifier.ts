@@ -10,7 +10,7 @@ const babiesPacifiers: IProduct[] = [
     slug: "chupetero-batman",
     reference: `${categoryRerefence}-001-001-M-V2022`,
     title: "Chupetero Batman",
-    category: categoryName,
+    categories: [categoryName],
     price: 995,
     description: "Chupetero con dibujos de Batman",
     image: "",
