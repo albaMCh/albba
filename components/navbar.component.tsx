@@ -17,11 +17,6 @@ const Navbar = () => {
   return (
     <header className={navbarStyles.header}>
       <nav className={navbarStyles.nav}>
-        <Link href={"/"}>
-          <a>
-            <h1 className="logo">alBBa</h1>
-          </a>
-        </Link>
         <div
           onClick={() => setNavActive(!navActive)}
           className={navbarStyles.menuBar}
